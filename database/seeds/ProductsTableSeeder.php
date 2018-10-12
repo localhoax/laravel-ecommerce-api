@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder
                'description' => $faker->paragraph,
                'price' => $faker->numberBetween(400, 10000),
                'category' => $faker->word,
-               'thumbnail_img'=> $faker->url
+               'thumbnail_url'=> $faker->url
             ]);
         }
     }
