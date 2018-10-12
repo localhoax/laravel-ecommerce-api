@@ -17,6 +17,13 @@ use App\Product;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+Route::get('/', function(){
+    $res = [
+        'status' => 'Live',
+        'version' => '1.0.0'
+    ];
+    return response()->json($res);
+});
 
 Route::get('products', 'ProductController@index');
 Route::get('products/{product}', 'ProductController@show');
