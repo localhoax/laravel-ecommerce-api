@@ -26,7 +26,9 @@ Route::get('/', function(){
 });
 
 Route::get('products', 'ProductController@index');
+Route::get('products/category', 'ProductController@all_category');
 Route::get('products/{product}', 'ProductController@show');
 Route::post('products', 'ProductController@store');
+Route::get('products/category/{category}', 'ProductController@one_category');
 Route::put('products/{product}', 'ProductController@update');
 Route::delete('products/{product}', 'ProductController@delete');
