@@ -69,6 +69,7 @@
                     Shopping
                 </div>
                 <div class="links">
+                    <a href="/store">Store</a>
                     <a href="/api/">Status</a>
                     <a href="/api/products">Products</a>
                     <a href="/api/products/category">Categories</a>
