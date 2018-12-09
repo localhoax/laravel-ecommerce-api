@@ -1,21 +1,26 @@
 <template>
-<div class="container">
+<section>
+  <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12 col-lg-12">
-            <b-form-group label="Select a category:">
-                <b-form-radio-group v-model="category" :options="options" name="radiosStacked">
-                </b-form-radio-group>
-            </b-form-group>
-        </div>
+      <div class="col-md-12 col-lg-12">
+        <b-form-group label="Select a category:">
+          <b-form-radio-group v-model="category" :options="options" name="radiosStacked">
+          </b-form-radio-group>
+        </b-form-group>
+      </div>
     </div>
     <div class="row">
-        <product-item v-for="prod in products" :item="prod" :key="prod.id" :displayList="displayList"></product-item>
+      <product-item v-for="prod in products" :item="prod" :key="prod.id" :displayList="displayList"></product-item>
     </div>
-</div>
+  </div>
+</section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {
+  mapGetters,
+  mapActions
+} from "vuex";
 import ProductItem from "./product/ProductItem.vue";
 export default {
   data() {
@@ -46,11 +51,11 @@ export default {
       this.displayList = isList;
     }
   },
-  mounted(){
+  mounted() {
     this.listenToCategoryList(this.category);
   },
   watch: {
-    category: function(val){
+    category: function (val) {
       this.listenToCategoryList(val);
     }
   }
@@ -69,7 +74,7 @@ export default {
   display: flex;
 }
 
-.is-flex > [class*="col-"] {
+.is-flex>[class*="col-"] {
   display: flex;
   flex-direction: column;
 }

@@ -2,7 +2,6 @@
   <div>
     <app-header></app-header>
     <message-component></message-component>
-    <b-dd-divider></b-dd-divider>
     <router-view></router-view>
   </div>
 </template>
@@ -25,7 +24,6 @@ export default {
   },
   created() {
     let uid = this.$store.getters.currentUser.uid;
-    // this.listenToProductList();
     this.getShoppingCart({
       uid,
       currentCart: this.$store.getters.cartItemList
