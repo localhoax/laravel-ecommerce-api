@@ -1,4 +1,4 @@
-# laravel-products-api
+# Laravel Products API (laravel-products-api)
 **Laravel backend API with VueJS Frontend**
 ### Technology Stack
 * PHP
